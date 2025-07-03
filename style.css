@@ -1,0 +1,507 @@
+body {
+  font-family: "Verdana", Geneva, sans-serif;
+  background-color: #f2f1ed; /* Soft Pearl as primary background */
+  color: #1e1b1b; /* Obsidian Black for default dark text */
+}
+/* Custom color palette from the provided image */
+.obsidian-black-bg {
+  background-color: #1e1b1b;
+}
+.crimson-depth-bg {
+  background-color: #710014; /* Crimson Depth */
+}
+.warm-sand-bg {
+  background-color: #9a6f5f; /* Warm Sand */
+}
+.soft-pearl-bg {
+  background-color: #f2f1ed; /* Soft Pearl */
+}
+.text-crimson-depth {
+  color: #710014;
+}
+.text-warm-sand {
+  color: #9a6f5f;
+}
+.text-soft-pearl {
+  color: #f2f1ed;
+}
+.text-obsidian-black {
+  color: #1e1b1b;
+}
+
+/* Hero section background and text - using the new palette */
+.hero-background {
+  background-color: #f2f1ed; /* Soft Pearl */
+  color: #1e1b1b; /* Obsidian Black text */
+}
+.hero-heading {
+  color: #1e1b1b; /* Obsidian Black for heading */
+}
+.hero-text {
+  color: #710014; /* Crimson Depth for descriptive text */
+}
+
+/* Section cards (Education, Certificates, Projects) - adapted to new palette */
+.section-card-bg {
+  background-color: #ffffff; /* Pure white for cards on light background */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Very subtle black border */
+  /* Fancy shadow for cards */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease; /* Smooth transition for background changes and shadow */
+  position: relative; /* Needed for absolute positioning of background elements */
+  overflow: hidden; /* Ensure blurred elements don't overflow */
+}
+.section-item-card {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.03
+  ); /* Very subtle light black overlay for inner cards */
+  border: 1px solid rgba(0, 0, 0, 0.06); /* Faint black border for distinction */
+  /* Fancy shadow for inner cards */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08), 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Push content and link apart */
+}
+
+.cardd {
+  height: 650px;
+}
+.section-item-card:hover {
+  background-color: rgba(0, 0, 0, 0.08); /* Slightly more opaque on hover */
+  transform: translateY(-5px);
+  /* More pronounced fancy shadow on hover */
+  box-shadow: 0 15px 40px rgba(113, 0, 20, 0.2),
+    0 5px 20px rgba(154, 111, 95, 0.1);
+}
+.section-item-card h3 {
+  color: #1e1b1b; /* Obsidian Black for headings */
+}
+.section-item-card p {
+  color: #555555; /* Dark grey for body text */
+}
+
+/* Style for "View Credential" link in Certificates section */
+.certificate-link {
+  display: inline-block;
+  margin-top: auto; /* Push the link to the bottom of the flex container */
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; /* rounded-md */
+  background-color: rgba(113, 0, 20, 0.05); /* Very light crimson tint */
+  color: #710014; /* Crimson Depth text */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(113, 0, 20, 0.1);
+}
+
+.certificate-link:hover {
+  background-color: rgba(113, 0, 20, 0.15); /* More prominent tint on hover */
+  color: #5c0010; /* Darker crimson */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(113, 0, 20, 0.2);
+}
+
+/* Buttons (Download CV, Project Buttons) - using new accent color */
+.button-primary {
+  background-color: #710014; /* Crimson Depth */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  /* Fancy button initial shadow */
+  box-shadow: 0 5px 15px rgba(113, 0, 20, 0.3),
+    0 2px 5px rgba(154, 111, 95, 0.1);
+  display: inline-block;
+  text-decoration: none;
+}
+.button-primary:hover {
+  background-color: #5c0010; /* Darker Crimson Depth */
+  transform: translateY(-3px); /* Lift effect */
+  /* Fancy button hover shadow */
+  box-shadow: 0 10px 25px rgba(113, 0, 20, 0.5),
+    0 5px 15px rgba(154, 111, 95, 0.2);
+}
+
+/* Enhanced shadow for a luminous, modern look (adjusted for light background) */
+.shadow-custom {
+  /* Refined general custom shadow */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* New custom "fancy" shadows */
+.shadow-fancy-light {
+  box-shadow: 0 5px 15px rgba(154, 111, 95, 0.2),
+    0 2px 5px rgba(154, 111, 95, 0.1); /* Warm Sand based */
+}
+.shadow-fancy-medium {
+  box-shadow: 0 10px 25px rgba(154, 111, 95, 0.3),
+    0 5px 10px rgba(154, 111, 95, 0.15); /* More pronounced Warm Sand */
+}
+.shadow-fancy-deep {
+  box-shadow: 0 15px 35px rgba(113, 0, 20, 0.4),
+    0 8px 15px rgba(113, 0, 20, 0.2); /* Crimson Depth based for deeper effect */
+}
+
+/* Fancy Icon hover effect for light icons on light background - adapted to new palette */
+.icon-hover-effect {
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: #1e1b1b; /* Obsidian Black default */
+}
+.icon-hover-effect:hover {
+  transform: translateY(-3px) scale(1.05);
+  color: #710014; /* Crimson Depth on hover */
+  background-color: rgba(
+    113,
+    0,
+    20,
+    0.08
+  ); /* Even subtler red tint background */
+  /* Fancy icon hover shadow */
+  box-shadow: 0 8px 16px rgba(113, 0, 20, 0.25),
+    0 3px 8px rgba(154, 111, 95, 0.1);
+}
+
+/* Contact section background and text - using Soft Pearl and darker text */
+.contact-background {
+  background-color: #f2f1ed; /* Soft Pearl for contact section background (already was this) */
+  color: #1e1b1b; /* Obsidian Black for dark text */
+  /* Fancy shadow for contact background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for absolute positioning of background elements */
+  overflow: hidden; /* Ensure blurred elements don't overflow */
+}
+.contact-background h2,
+.contact-background h3 {
+  color: #710014; /* Crimson Depth for headings */
+}
+.contact-background .text-gray-700,
+.contact-background .text-gray-600 {
+  color: #1e1b1b; /* Obsidian Black for general text */
+}
+.contact-background input,
+.contact-background textarea {
+  background-color: #ffffff; /* White input fields for clarity */
+  border-color: #9a6f5f; /* Warm Sand border */
+  transition: all 0.3s ease; /* Smooth transition for focus effects */
+}
+.contact-background input:focus,
+.contact-background textarea:focus {
+  border-color: #710014; /* Crimson Depth focus ring */
+  /* Fancy focus shadow */
+  box-shadow: 0 0 0 4px rgba(113, 0, 20, 0.4),
+    inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Styles for draggable project slider */
+.projects-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-left: 40px; /* Espace pour les flèches */
+  padding-right: 40px; /* Espace pour les flèches */
+}
+
+.projects-slider-content {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+  padding-bottom: 1rem;
+  transition: transform 0.15s ease-out; /* Smoother dragging visual feedback */
+}
+.projects-slider-content::-webkit-scrollbar {
+  display: none;
+}
+.projects-slider-content.dragging {
+  cursor: grabbing;
+  transition: none; /* Disable transition during active drag */
+}
+
+.project-card-wrapper {
+  flex: 0 0 auto;
+  width: calc(100% / 3 - 1.3333rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.project-card-wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  /* Fancy image shadow */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15), 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease; /* Smooth transition for image shadow */
+}
+
+@media (max-width: 1024px) {
+  .project-card-wrapper {
+    width: calc(100% / 2 - 1rem);
+  }
+}
+@media (max-width: 768px) {
+  .project-card-wrapper {
+    width: 100%;
+  }
+}
+
+/* Modified slider arrows positioning */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #710014; /* Crimson Depth */
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20; /* Plus haut pour être au-dessus du contenu */
+  opacity: 0.9;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  /* Fancy arrow initial shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.slider-arrow:hover {
+  opacity: 1;
+  background-color: #5c0010; /* Darker Crimson Depth on hover */
+  transform: translateY(-50%) scale(1.15); /* More prominent pop out effect */
+  /* Fancy arrow hover shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Position arrows at the edges of the padded area */
+.slider-arrow-left {
+  left: 0px;
+}
+.slider-arrow-right {
+  right: 0px;
+}
+
+/* Header/Footer shadows */
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+footer {
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Added background elements for other sections */
+.animated-bg-element-1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(30px);
+  animation: pulse 6s infinite alternate;
+  z-index: 0;
+}
+.animated-bg-element-2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(30px);
+  animation: pulse-slow 8s infinite alternate;
+  z-index: 0;
+}
+
+/* Specific positions for Education section */
+#education .animated-bg-element-1 {
+  background-color: #710014; /* Crimson Depth */
+  top: 10%;
+  left: -30px;
+}
+#education .animated-bg-element-2 {
+  background-color: #9a6f5f; /* Warm Sand */
+  bottom: 5%;
+  right: -40px;
+}
+
+/* Specific positions for Certificates section */
+#certificates .animated-bg-element-1 {
+  background-color: #9a6f5f; /* Warm Sand */
+  top: -20px;
+  right: 0px;
+}
+#certificates .animated-bg-element-2 {
+  background-color: #710014; /* Crimson Depth */
+  bottom: 0px;
+  left: -10px;
+}
+
+/* Specific positions for Projects section */
+#projects .animated-bg-element-1 {
+  background-color: #710014; /* Crimson Depth */
+  top: 20%;
+  left: -50px;
+}
+#projects .animated-bg-element-2 {
+  background-color: #9a6f5f; /* Warm Sand */
+  bottom: 10%;
+  right: -60px;
+}
+
+/* New styles for scroll reveal effect */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px); /* Start slightly below */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+  will-change: opacity, transform; /* Optimize for animation */
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline specific styles for Education section */
+.timeline {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #710014; /* Warm Sand for the line */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  z-index: 1; /* Ensure line is behind items, but above animated-bg-elements */
+}
+
+.timeline-item {
+  padding: 10px 0;
+  position: relative;
+  width: 50%;
+  left: 50%; /* Start items from the middle */
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+}
+
+.timeline-item:nth-child(odd) {
+  /* Items on the left */
+  left: 0;
+  padding-right: 60px;
+  text-align: right;
+  transform: translateX(0); /* Reset transform for left-aligned items */
+}
+
+.timeline-item:nth-child(even) {
+  /* Items on the right */
+  left: 50%;
+  padding-left: 60px;
+  text-align: left;
+  transform: translateX(0); /* Reset transform for right-aligned items */
+}
+
+.timeline-item-content {
+  background-color: #ffffff; /* White card background */
+  padding: 20px;
+  border-radius: 8px;
+  /* Fancy shadow for timeline content cards */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1), 0 3px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2; /* Ensure content is above the line and animated elements */
+  transition: all 0.3s ease;
+}
+
+.timeline-item-content:hover {
+  transform: translateY(-5px);
+  /* More pronounced fancy shadow on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-year-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #710014; /* Crimson Depth for circles */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3; /* Ensure circles are on top */
+  /* Fancy shadow for year circles */
+  box-shadow: 0 0 0 4px #f2f1ed, 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item:nth-child(odd) .timeline-year-circle {
+  right: -40px; /* Position circle to the right of left items */
+}
+
+.timeline-item:nth-child(even) .timeline-year-circle {
+  left: -40px; /* Position circle to the left of right items */
+}
+
+/* Smaller screens adjustments for timeline */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px; /* Move line to the left edge */
+  }
+  .timeline-item {
+    width: 100%; /* Take full width */
+    left: 0; /* Align all items to the left */
+    padding-left: 60px; /* Space for line and circle */
+    padding-right: 10px; /* Reduce right padding */
+    text-align: left; /* Align text to left for all items */
+    transform: translateX(0); /* Remove horizontal transform */
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    left: 0; /* Explicitly set left to 0 */
+    padding-left: 60px;
+    padding-right: 10px;
+    text-align: left;
+    transform: translateX(0); /* Ensure no extra transform */
+  }
+  .timeline-item .timeline-year-circle {
+    left: -20px; /* Position the circle so its center aligns with the line at 20px */
+    right: auto; /* Reset right property for consistency */
+    transform: translateY(-50%); /* Only vertical centering needed */
+  }
+}
+
+/* Navbar link transition */
+header nav a {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease; /* Added background-color and box-shadow */
+  padding: 0.5rem 0.75rem; /* Added padding */
+  border-radius: 0.5rem; /* Added border-radius */
+  display: inline-block; /* Ensure padding and background work */
+}
+header nav a:hover {
+  transform: translateY(-2px); /* Lift slightly on hover */
+  background-color: rgba(113, 0, 20, 0.1); /* Subtle crimson tint */
+  /* Fancy navbar link hover shadow */
+  box-shadow: 0 4px 10px rgba(154, 111, 95, 0.2); /* Light golden shadow on hover */
+}
